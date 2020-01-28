@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginScreenViewController" customModule="Time_Tracking" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="OCG-OO-gIM" id="FBg-MJ-ODe"/>
+                <outlet property="passwordTextField" destination="bCf-TY-S24" id="TKu-M2-cVn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-Jp-IHy">
+                    <rect key="frame" x="15" y="309" width="384" height="278"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVX-CY-ZqT">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="150"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_iteris" translatesAutoresizingMaskIntoConstraints="NO" id="SGi-Yg-cWo">
+                                    <rect key="frame" x="42" y="0.0" width="300" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="sQO-jM-thJ"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="Rb3-Td-tFo"/>
+                                <constraint firstItem="SGi-Yg-cWo" firstAttribute="top" secondItem="rVX-CY-ZqT" secondAttribute="top" id="Sgn-EK-zJK"/>
+                                <constraint firstItem="SGi-Yg-cWo" firstAttribute="centerX" secondItem="rVX-CY-ZqT" secondAttribute="centerX" id="mSJ-y8-35P"/>
+                                <constraint firstAttribute="bottom" secondItem="SGi-Yg-cWo" secondAttribute="bottom" id="pxa-is-G4e"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCG-OO-gIM">
+                            <rect key="frame" x="0.0" y="160" width="384" height="34"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a sua senha secreta" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-TY-S24">
+                            <rect key="frame" x="0.0" y="204" width="384" height="34"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bas-Pk-a2i">
+                            <rect key="frame" x="0.0" y="248" width="384" height="30"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5F-oF-3aV">
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-BK-bbu">
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <state key="normal" title="Esqueci minha senha!">
+                                                <color key="titleColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="forgotPassword:" destination="-1" eventType="touchUpInside" id="rQR-3i-Yc1"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aiU-BK-bbu" secondAttribute="trailing" id="4NB-Dw-DKK"/>
+                                        <constraint firstItem="aiU-BK-bbu" firstAttribute="leading" secondItem="Z5F-oF-3aV" secondAttribute="leading" id="C7s-Qr-i6S"/>
+                                        <constraint firstAttribute="height" constant="30" id="ILx-4k-M63"/>
+                                        <constraint firstItem="aiU-BK-bbu" firstAttribute="top" secondItem="Z5F-oF-3aV" secondAttribute="top" id="PV2-X2-pXm"/>
+                                        <constraint firstAttribute="bottom" secondItem="aiU-BK-bbu" secondAttribute="bottom" id="ymM-RV-hEU"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ec4-mY-e8z">
+                                    <rect key="frame" x="192" y="0.0" width="192" height="30"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <state key="normal" title="Entrar">
+                                        <color key="titleColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="login:" destination="-1" eventType="touchUpInside" id="XgU-9W-OV6"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Ec4-mY-e8z" firstAttribute="width" secondItem="aiU-BK-bbu" secondAttribute="width" id="5Eq-90-x7V"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="gcx-MJ-I4l"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versão XIB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-gK-OwG">
+                    <rect key="frame" x="165.5" y="44" width="83.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4FM-Jp-IHy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Jag-xB-whZ"/>
+                <constraint firstItem="4FM-Jp-IHy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KCs-6E-iW0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4FM-Jp-IHy" secondAttribute="trailing" constant="15" id="nI7-ve-3lM"/>
+                <constraint firstItem="sWg-gK-OwG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="shs-ac-g8J"/>
+                <constraint firstItem="sWg-gK-OwG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zrh-vQ-cK1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="151"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_iteris" width="2840" height="1080"/>
+    </resources>
+</document>
